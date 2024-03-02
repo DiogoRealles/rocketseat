@@ -1,6 +1,6 @@
-<div style="text-align: center; margin-block: 24px">
+<div>
   
-  # ROCKETSEAT
+  <h1 style="text-align: center; margin-block: 24px;">ROCKETSEAT</h1>
 
 ![alt text](tecnologies.webp)
 
