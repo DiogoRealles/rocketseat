@@ -52,7 +52,7 @@
 
 <details>
   <summary>Tipos de requisição</summary>
-  Existem 3 tipos de parâmetros comumente utilizados, . <br />
+  Existem 3 tipos de parâmetros comumente utilizados. <br />
   <b>params:</b> Recebe os dados da requisição na rota. <br />
   Uso: Buscar algo expecífico. <br />
   EX: <b>meusite.com/users/380327</b>. Pode ser usado com PUT, PATCH, GET, DELETE. <br />
@@ -61,5 +61,23 @@
   <b>body:</b> Recebe os dados da requisição no corpo da requisição (FORMs), em um objeto em JSON. <br />
   Uso: Salvar dados em DBs. <br />
   EX: <b>{name: 'diogo', role: 'Front-end'}</b>. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é Controllers</summary>
+  São classes onde conterão os métodos de processamento e regras de negócio da aplicação. <br />
+  É preciso instanciar onde for utilizar, ou usar métodos estaticos. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que são HTTP Status Code</summary>
+  Representa o estado da resposta, são agrupados por faixas númericas. <br />
+  <b>100-199:</b> Informativo (A solicitação foi aceita ou em processamento, etc). <br />
+  <b>200-299:</b> Sucesso (Requisição bem sucedida, etc). <br />
+  <b>300-399:</b> Redirecionamento (Movido, movido permanentemente, etc). <br />
+  <b>400-499:</b> Erro no cliente (Bad req, set timeout, não autorizado, não encontrado, etc). <br />
+  <b>500-599:</b> Erro no servidor (Servidor falhou ao concluir a solicitação, erro interno, etc). <br />
 </details>
 <br />
