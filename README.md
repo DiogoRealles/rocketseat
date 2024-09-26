@@ -2,7 +2,7 @@
 
 ![logo Rocketseat](cover.webp)
 
-# Se aventure no ecossistema JavaScript e desenvolva projetos FullStack
+# Se aventure no ecossistema JavaScript e desenvolva na prática projetos FullStack
 
 <div>
   <img src="https://img.shields.io/badge/VS%20Code-000000.svg?style=for-the-badge&logo=visual-studio-code&logoColor=ffffff" />
@@ -19,168 +19,49 @@
 <div>
 <br /> <br />
 
-# HTML5 & CSS3: +2hrs
+# FullStack: +45hrs
 
   <p>
-    Dê início a sua carreira na programação aprendendo HTML5 e CSS3, para poder criar seus projetos web!. <br />
-    Conheça os elementos e boas práticas para uma estrutura semântica do HTML5. <br />
-    Aprenda a estilizar seus sites de forma profissional com as principais regras e features de CSS3. <br />
+    Aprenda desde os fundamentos da programação (Hardware Software, SO, Internet, Client-side, Server-side). <br />
+    Aprenda a configurar o ambiente de desenvolvimento com ferramentas e recursos para programar. <br />
+    <b>GIT & GitHUB:</b> Aprenda versionar projetos em repositórios remotos. Aprenda a fazer deploy do projeto em GitHUB pags. <br />
+    <b>HTML5:</b> Aprenda desde os fundamentos do HTML (TAGS, Estrutura semântica, Atributos e Propriedades, Meta tags, Acessibilidades). <br />
+    <b>CSS3:</b> Aprenda desde os fundamentos do CSS (Estilizar um projeto, Atributos e Propriedades). Avançando com (Flexbox e CSS Grid, Animation e Transition). <br />
+    Aprenda sobre responsividade (mobile-first, Tablet & Desktop). <br />
+    <b>JAVASCRIPT:</b> Aprenda desde os fundamentos da linguagem (Variáveis, Tipos de dados, Funções e Objetos e seus métodos, Selectors de DOM, ES6+, ESNext). <br />
+    <b>TYPESCRIPT:</b> Entenda as vantagens do seperset (Tipagem, Types e Interfaces). <br />
+    <b>NODEJS:</b> Aprenda desde os fundamentos (API RESTful, Banco de dados, MVC). <br />
+    <b>REACTJS:</b> Aprenda desde os fundamentos (Components, States, Hoocks, Contexts). <br />
   </p>
-  
-- **Introdução ao HTML5 + CSS3 com Flexbox e CSS Grid, Animações e Transições** <br />
-- **Meta tags de compartilhamento e Técnicas de SEO** <br />
-- **Acessibilidades** <br />
-- **Básico de Git e GitHUB** <br />
-- **Deploy do projeto em GitHUB pags** <br />
 
 ## PROJETOS
 
-<!-- ## Awax e Starbucks, B7Burguer -->
+## Página de receitas, Local Turístico, Portfólio, Lista de compras, RocketNotes (Projeto Final)
 
-  <p>
-    Projetos colocado em prática tudo que foi aprendido ao longo do curso. <br />
-    Elementos semânticos do HTML5, Acessibilidade, SEO, Boas práticas, CSS3 com flexbox, CSS3 Grid, Animations e muito mais. <br />
-  </p>
-  <br /> <br />
-
-# TailwindCSS: +2hrs
-
-<p>
-  Aprenda todos os recursos de TailwindCSS com o apoio de diversos exercícios. <br />
-
-- **Introdução e fundamentos do TailwindCSS** <br />
-- **Componentes do TailwindCSS** <br />
-- **Desenvolvimento Mobile First** <br />
-- **Utilities e Helpers do TailwindCSS** <br />
-- **Fundamentos do TailwindCSS** <br />
-- **A;'oes e Interações** <br />
-- **Otimização de CSS para produção** <br />
-</p>
-
-## PROJETOS
-
-<!-- ## Efeito de loading, Hero card, Galeria de imagens (Grid), Tabela responsiva -->
-
-<p>
-  <!-- Clone da página de produtos da Amazon.<br /> -->
-  Colocando em prática os conceitos vistos neste módulo. <br />
-</p>
 <br /> <br />
 
-# JS: +13hrs
+# REACTJS + NEXTJS: +40hrs
 
 <p>
-  Aprenda tudo sobre JavaScript(ES6+), lógica de prog., orientação a objetos, crie projetos para web. <br />
-
-- **Fundamentos do JS** <br />
-- **DOM, Eventos, e mais** <br />
-- **Consumindo API REST com JS** <br />
-- **Orientação a Objetos** <br />
-- **Async Await** <br />
-- **Mini projetos para práticar os conceitos (Urna eletrônica, Compra de Pizza, Slideshow e mais)** <br />
+  <b>REACTJS: </b> Conheça os tópicos essenciais de REACTJS para web. (Fundamentos do REACTJS, Vite, Components, props, children, states, hooks, custom hooks, renderização condicional, REACTJS Hook Form + Zod, REACTJS Router DOM, Hooks, Custom Hooks, Context API). <br />
+  <b>NEXTJS: </b> Avance com (NEXTJS + TAILWINDCSS, SPA, SSR, SSG, CSR, Rotas com pages). <br />
 </p>
 
 ## PROJETOS
 
-<!-- ## Urna eletrônica, Compra de Pizza, Slideshow -->
+## Coffee Delivery, Github Blog, Pizza Shop, Ignite Call
 
-<p>
-  Projeto colocando em práticas conceitos visto no curso. <br />
-  Manipulação do DOM, Manipulação de Arrays e Objetos, APIs e muito mais. <br />
-</p>
 <br /> <br />
 
-# TypeScript: +3hrs
+# NODEJS: +35hrs
 
 <p>
-  Aprenda o essêncial TypeScript para lidar com projetos futuros
-
-- **Fundamentos do TypeScript** <br />
-- **Features do TypeScript** <br />
-- **Integração de TypeScript com projetos JS** <br />
-- **Configuração do TypeScript** <br />
+  <b>NODEJS: </b> exploraremos tópicos cruciais para o desenvolvimento robusto de aplicações back-end, do zero até o deploy. <br />
+  Aprenda fazer testes automatizados, SOLID, DDD, . <br />
 </p>
 
 ## PROJETOS
 
-# ReactJS: +40hrs
+## Daily Diet API, FindFriend PAI (SOLID), FastFeet Delivery API (DDD)
 
-<p>
-  Crie projetos completos com ReactJS, utilizando tecnologias em alta no mercado como ShadCN-UI, Redux, Node.js e mais!. <br />
-
-- **Fundamentos do ReactJS** <br />
-- **Vite, Components, props, children, states, hooks, custom hooks, renderização condicional** <br />
-- **ReactJS + TailwindCSS** <br />
-- **ReactJS Hook Form + Zod** <br />
-- **Consumindo API / HTTP** <br />
-- **ReactJS Router DOM** <br />
-- **Hooks, Custom Hooks, Context API** <br />
-- **ReactJS Query (TanStack)** <br />
-- **ReactJS com NodeJS, Express, Redux** <br />
-- **Deploy de projetos em ReacJS** <br />
-</p>
-
-## PROJETOS
-
-<!-- ## OLX Clone (Front-end), DevsFood, Sistema de Gestão de Condomínio -->
-
-<p>
-  Projetos reais, com todas as features e conceitos vistos ao longo do curso. <br />
-</p>
-<br /> <br />
-
-# NextJS + TailwindCSS: +32hrs
-
-<p>
-  Curso Completo de <b>NextJS + TailwindCSS</b>, CORS, Postman, PostgreSQL, Prisma, NextAuth, Testes. <br />
-
-- **Fundamentos do ReactJS / NextJS + TailwindCSS** <br />
-- **Introdução a estrutura de pastas** <br />
-- **Rotas e páginas no NextJS** <br />
-- **Server components** <br />
-- **Meta tags no NextJS** <br />
-- **Assets (Imagens e vídeos)** <br />
-- **Consumindo APIs** <br />
-- **SSG, CRC, SSC** <br />
-- **Configurando TailwindCSS no NextJS** <br />
-- **Mobile first e media queries** <br />
-- **NextJS + Git e GitHUB** <br />
-- **Deploy do projeto em NextJS na Vercel** <br />
-</p>
-
-## PROJETOS
-
-<!-- ## B7Delivery -->
-
-<p>
-  Projeto real, práticando conceitos aprendidos ao longo do curso. <br />
-</p>
-<br /> <br />
-
-# NodeJS: +20hrs
-
-<p>
-  Curso Completo de <b>NodeJS</b>. <br />
-
-- **O que é Servidor Back-end, HTTPs** <br />
-- **Introdução ao NodeJS e Express** <br />
-- **NodeJS + Zod** <br />
-- **NodeJS + SQL e MongoDB** <br />
-- **Criando APIs com NodeJS + Express** <br />
-- **Packages, Módulos e Core Modules** <br />
-- **Autenticação e E-mails** <br />
-- **Testes TDD** <br />
-- **Configurando TailwindCSS no NextJS** <br />
-- **Mobile first e media queries** <br />
-- **NextJS + Git e GitHUB** <br />
-- **Deploy do projeto em NextJS na Vercel** <br />
-</p>
-
-## PROJETOS
-
-<!-- ## Canil, Chat (websocket), OLX Clone (Back-end) -->
-
-<p>
-  Projeto real, práticando conceitos aprendidos ao longo do curso. <br />
-</p>
 <br /> <br />
