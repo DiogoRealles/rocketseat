@@ -18,6 +18,8 @@
   É utilizado por grandes empresas (Microsoft, Apple, Netflix, Amazon, etc) para desenvolvimento de grandes projetos (API, Scripts e Automação, Back-end, IA, etc). <br />
   Utiliza V8 Engine (desenvolvido pela Google) para interpretar JS e rodar no server-side. <br />
   <b>Event Loop</b> É um processo Sigle Thread / Único Porteiro e Non-blocking I-O / Não bloqueia entrada ou saída. Recebe a requisição e envia a função para Call Stack. Conforme as função vão sendo finalizadas, são retornadas pelo Event Loop para que as chamou. <br />
+  Utiliza Módulos / Packages para construir aplicações. <br />
+  <a href="https://nodejs.org/en/download/"><b>Download NodeJS</b></a>
 </details>
 <br />
 
