@@ -83,3 +83,33 @@
   <b>500-599:</b> Erro no servidor (Servidor falhou ao concluir a solicitação, erro interno, etc). <br />
 </details>
 <br />
+
+<details>
+  <summary>O que é Middleware</summary>
+  São funções que ficam entre a requisição do usuário e a resposta da aplicação. Tem acesso a request e response e Next. <br />
+  É como um porteiro, que verifica o ticket dos visitantes e libera ou barra a entrada. <br />
+  EX: Permite que somente usuários admins cadastrem produtos na loja, middleware faz essa verificação e redireciona para cadastro ou login. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é Banco de Dados</summary>
+  É uma coleção de diversos tipos de dados (lista de contatos, de compras de convidados, etc). Devem estar organizados por assuntos. <br />
+  Banco de dados é composto por: <br />
+  <b>Banco de Dados:</b> Recebe um nome único. É onde ficaram guardados tabelas e dados. <br />
+  <b>Tabela:</b> Recebe um nome único. É uma forma de organizar os dados por assuntos, os dados são inseridos em tuplas/celula (id, nome, email, password, avatar, etc). <br />
+  <b>Registro:</b> São os dados e seus tipos (varchar, inter, boolean, etc). <br />
+  Banco de dados co tableas que se relacionam são conhecidos como: <b>Banco de Dados Relacional</b>. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é SQL</summary>
+  É a linguagem padrão para banco de dados relacional. <br />
+  Utiliza comandos para manipulação dos dados. <br />
+  <b>CREATE:</b> Comando para criar DB ou tabelas. <br />
+  <b>DROP:</b> Comando para excluir DB ou tabelas. <br />
+  <b>ALTER:</b> Comando para alterar nome de DB ou tabelas. <br />
+  <b>INSERT INTO:</b> Comando para inserir dados em uma tabela. <br />
+</details>
+<br />
