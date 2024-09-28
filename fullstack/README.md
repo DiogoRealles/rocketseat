@@ -118,13 +118,6 @@
   <summary>O que é Query Builder</summary>
   É construtor de consulta. Permite construir instruções SQL independente do banco de dados relacional utilizado. <br />
   Exemplo de query builder: KNexJS. <br />
-</details>
-<br />
-
-<details>
-  <summary>O que é Query Builder</summary>
-  É construtor de consulta. Permite construir instruções SQL independente do banco de dados relacional utilizado. <br />
-  Exemplo de query builder: KNexJS. <br />
   <b>npm i knex:</b> Comando para instalar KNexJS no projeto. <br />
   <b>npx knex init:</b> Comando para iniciar arquivo de configuração do KNexJS. <br />
 </details>
