@@ -56,7 +56,7 @@
 # NODEJS: +35hrs
 
 <p>
-  <b>NODEJS: </b> exploraremos tópicos cruciais para o desenvolvimento robusto de aplicações back-end, do zero até o deploy. <br />
+  <b>NODEJS: </b> Exploraremos tópicos cruciais para o desenvolvimento robusto de aplicações back-end, do zero até o deploy. <br />
   Aprenda fazer testes automatizados, SOLID, DDD, . <br />
 </p>
 
