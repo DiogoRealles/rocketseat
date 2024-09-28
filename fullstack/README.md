@@ -113,3 +113,27 @@
   <b>INSERT INTO:</b> Comando para inserir dados em uma tabela. <br />
 </details>
 <br />
+
+<details>
+  <summary>O que é Query Builder</summary>
+  É construtor de consulta. Permite construir instruções SQL independente do banco de dados relacional utilizado. <br />
+  Exemplo de query builder: KNexJS. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é Query Builder</summary>
+  É construtor de consulta. Permite construir instruções SQL independente do banco de dados relacional utilizado. <br />
+  Exemplo de query builder: KNexJS. <br />
+  <b>npm i knex:</b> Comando para instalar KNexJS no projeto. <br />
+  <b>npx knex init:</b> Comando para iniciar arquivo de configuração do KNexJS. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é Migrations</summary>
+  É uma forma de versionar a base de dados. Trabalha na manipulação da base de dados: criando, alterando ou removendo. <br />
+  <b>UP:</b> Comando para criar ou alterar algo no DB. <br />
+  <b>DOWN:</b> Comando para fazer rollback / desfazer alterações realizadas pela migration. <br />
+</details>
+<br />
