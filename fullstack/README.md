@@ -31,7 +31,8 @@
 
 <details>
   <summary>O que é Express</summary>
-  É um framework para NodeJS, permite criar servidor da aplicação de forma rápida e segura. <br />
+  É um framework para NodeJS, utilizado para lidar com requisições HTTP (GET, POST, PUT, PATCH, DELETE) e Status Code (100-199, 200-299, 300-399, 400-499, 500-599), permite criar servidor da aplicação de forma rápida e segura. <br />
+  Middlewares, Rotas chamando Controllers que executam funcionalidade (index, show, create, update, delete), conexção com DB, e muito mais. <br />
   Muito utilizado para criar API. <br />
 </details>
 <br />
