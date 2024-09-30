@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const ContainerHeader = styled.header`
   grid-area: header;
-  /* height: 10.5rem; */
   width: 100%;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.background_700};
   display: flex;
-  justify-content: center;
-  padding-block: 8rem;
-  background: blueviolet;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 8rem;
 `;
 
 export const Profile = styled.div`
