@@ -131,3 +131,27 @@
   <b>DOWN:</b> Comando para fazer rollback / desfazer alterações realizadas pela migration. <br />
 </details>
 <br />
+
+<details>
+  <summary>O que é ReactJS</summary>
+  É uma lib / caixa de ferramentas JS utilizada para criar UIs mais facilmente. <br />
+  Baseado em componentes (funções reutilizaveis que recebem props). <br />
+  Utiliza Hooks (funções próprias) para manipular estados. <br />
+  <b>npm create vite@latest PROJECT_NAME -- --template react:</b> Comando para criar projeto em ReactJS com Vite. <br />
+  <b>Components:</b> São funções que retornam <b>JSX / TSX (XML + JS / TS)</b>. São criadas para serem reutilizadas, podem receber <b>PROPS</b> para manipular <b>STATES</b>. <br />
+  <b>Props:</b> São propriedades que o componente recebe para manipular <b>STATES</b>. <br />
+  <b>States:</b> São utilizados para guardar diversos tipos de valores. <br />
+  <b>Hooks:</b> São funções próprias do ReactJS, podem guardar e inserir valores em States, iniciar. <br />
+  <b>Custom Hooks:</b> São funções criadas no projeto utilizando Hooks do ReactJS. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é Pré Processadores</summary>
+  É utilizado para criar os estilos e gerar o arquivo CSS final. <br />
+  Facilitam a manutenção, possui features como minificar o arquivo final, deixa o cpodigo mais organizado e flexibiliza e reutilizável. <br />
+  <b>Styled-Components:</b> É um CSS-in-JS, ou seja, utiliza métodos de componentização em JS para criar componentes perfomáticos. <br />
+  É possível criar componentes a partir do contexto dos estilos. <br />
+  Gera nome de classes automaticamente, evitando colisão de estilos. <br />
+</details>
+<br />
