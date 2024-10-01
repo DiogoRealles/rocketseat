@@ -2,6 +2,11 @@ import { ContainerHome, Brand, Menu, Search, Content, NewNote } from './styles';
 
 import ContainerHeader from '../../components/Header/Index';
 import ContainerButtonText from '../../components/ButtonText/Index';
+import ContainerInput from '../../components/Input/Index';
+import ContainerSection from '../../components/Section/Index';
+
+import { FiPlus, FiSearch } from 'react-icons/fi';
+import ContainerNote from '../../components/Note/Index';
 
 const Index = () => {
   return (
@@ -22,13 +27,25 @@ const Index = () => {
         </li>
       </Menu>
       <Search>
-        <h2>Search</h2>
+        <ContainerInput icon={FiSearch} type="search" placeholder="Pesquisar pelo título" />
       </Search>
       <Content>
-        <h2>Content</h2>
+        <ContainerSection title="Minhas notas">
+          <ContainerNote data={
+            {
+              title: 'ReactJS',
+              tags: [
+                {id: '1', name: 'ReactJS'},
+                {id: '2', name: 'NodeJS'},
+              ]
+            }
+            } />
+          {/* <ContainerTag title="ReactJS" /> */}
+        </ContainerSection>
       </Content>
       <NewNote>
-        <h2>NewNote</h2>
+        <FiPlus />
+          Criar nota
       </NewNote>
     </ContainerHome>
   );

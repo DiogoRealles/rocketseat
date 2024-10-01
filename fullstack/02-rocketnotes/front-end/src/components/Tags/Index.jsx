@@ -1,7 +1,7 @@
 import { ContainerTag } from './styles';
 
-const Index = ({ title }) => {
-  return <ContainerTag>{title}</ContainerTag>;
+const Index = ({ title, ...rest }) => {
+  return <ContainerTag {...rest}>{title}</ContainerTag>;
 };
 
 export default Index;
