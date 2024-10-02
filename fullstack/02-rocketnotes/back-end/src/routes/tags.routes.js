@@ -4,8 +4,8 @@ const TagsController = require('../controllers/TagsController');
 
 const tagsController = new TagsController();
 
-const tagsRouter = Router();
+const tagsRoutes = Router();
 
-tagsRouter.get('/:user_id', tagsController.index);
+tagsRoutes.get('/:user_id', tagsController.index);
 
-module.exports = tagsRouter;
+module.exports = tagsRoutes;

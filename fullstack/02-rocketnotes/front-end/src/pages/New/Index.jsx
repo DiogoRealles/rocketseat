@@ -1,4 +1,3 @@
-import React from 'react';
 import { ContainerNew, Form } from './styles';
 
 import ContainerHeader from '../../components/Header/Index';
@@ -7,6 +6,7 @@ import ContainerTextarea from '../../components/Textarea/Index';
 import ContainerButton from '../../components/Button/Index';
 import ContainerNoteItem from '../../components/NoteItem';
 import ContainerSection from '../../components/Section/Index';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -17,7 +17,7 @@ const Index = () => {
         <Form action="">
           <header>
             <h1>Criar nota</h1>
-            <a href="/">Voltar</a>
+            <Link to="/">Voltar</Link>
           </header>
 
           <ContainerInput placeholder="Título" />
@@ -27,10 +27,17 @@ const Index = () => {
             <ContainerNoteItem value="https://rocketseat.com.br" />
             <ContainerNoteItem isNew placeholder="Novo link" />
           </ContainerSection>
+
+          <ContainerSection title="Links úteis">
+            <div className="tags">
+              <ContainerNoteItem value="ReactJS" />
+              <ContainerNoteItem isNew placeholder="Nova tag" />
+            </div>
+          </ContainerSection>
+
+          <ContainerButton label="Salvar" />
         </Form>
       </main>
-
-      <ContainerButton label="Salvar" />
     </ContainerNew>
   );
 };

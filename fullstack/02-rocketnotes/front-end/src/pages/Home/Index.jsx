@@ -27,25 +27,29 @@ const Index = () => {
         </li>
       </Menu>
       <Search>
-        <ContainerInput icon={FiSearch} type="search" placeholder="Pesquisar pelo título" />
+        <ContainerInput
+          icon={FiSearch}
+          type="search"
+          placeholder="Pesquisar pelo título"
+        />
       </Search>
       <Content>
         <ContainerSection title="Minhas notas">
-          <ContainerNote data={
-            {
+          <ContainerNote
+            data={{
               title: 'ReactJS',
               tags: [
-                {id: '1', name: 'ReactJS'},
-                {id: '2', name: 'NodeJS'},
-              ]
-            }
-            } />
+                { id: '1', name: 'ReactJS' },
+                { id: '2', name: 'NodeJS' },
+              ],
+            }}
+          />
           {/* <ContainerTag title="ReactJS" /> */}
         </ContainerSection>
       </Content>
-      <NewNote>
+      <NewNote to="/new">
         <FiPlus />
-          Criar nota
+        Criar nota
       </NewNote>
     </ContainerHome>
   );

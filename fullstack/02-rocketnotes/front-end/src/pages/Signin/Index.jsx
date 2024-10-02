@@ -1,7 +1,8 @@
 import { ContainerSignin, Form, Background } from './styles';
-import { FiUser, FiMail, FiLock } from 'react-icons/fi';
-import ContainerInput from '../../components/Input';
-import ContainerButton from '../../components/Button';
+import { FiMail, FiLock } from 'react-icons/fi';
+import ContainerInput from '../../components/Input/Index';
+import ContainerButton from '../../components/Button/Index';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -17,7 +18,7 @@ const Index = () => {
 
         <ContainerButton label="Entrar" />
 
-        <a href="">Criar conta</a>
+        <Link to="/register">Criar conta</Link>
       </Form>
 
       <Background />

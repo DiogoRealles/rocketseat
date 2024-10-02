@@ -4,7 +4,7 @@ import { ContainerHeader, Profile, Logout } from './styles';
 const Index = () => {
   return (
     <ContainerHeader>
-      <Profile>
+      <Profile to="/profile">
         <img
           src="https://avatars.githubusercontent.com/u/96884051?v=4"
           alt="Foto do usuário"

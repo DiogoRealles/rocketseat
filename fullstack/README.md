@@ -155,3 +155,15 @@
   Gera nome de classes automaticamente, evitando colisão de estilos. <br />
 </details>
 <br />
+
+<details>
+  <summary>O que é JWT (JsonWebToken)</summary>
+  É um padrão de mercado que define um token no formato JSON para troca de informações entre front-end e back-end. <br />
+  JWT não representa o mecanismo de autenticação. Porém é um meio para a troca de inforções no fluxo de autenticação. <br />
+  É como um crachá com informações básicoas que o usuário utiliza para navegar na aplicação, sem a necessidade de ficar fazendo autenticação toda hora. <br />
+  É dividido em 3 partes principais:. <br />
+  <b>HEADER:</b> Algoritmo de criptografia e tipo do token. <br />
+  <b>PAYLOAD:</b> Conteúdo do token, pode receber dados como: (id, name, password). <br />
+  <b>SIGNATURE:</b> Garante a integridade do token. <br />
+</details>
+<br />

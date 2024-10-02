@@ -3,23 +3,25 @@ import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/global';
 import theme from './styles/theme';
+import Routes from './routes/Index';
 import Details from './pages/Details';
-import Home from './pages/Home/Index';
-import Signin from './pages/Signin/Index';
-import Signup from './pages/Signup/Index';
-import Profile from './pages/Profile/Index';
-import New from './pages/New/Index';
+import Home from './pages/Home';
+import Signin from './pages/Signin';
+import Signup from './pages/Signup';
+import Profile from './pages/Profile';
+import New from './pages/New';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+      <Routes />
       {/* <Details /> */}
       {/* <Home /> */}
       {/* <Signin /> */}
       {/* <Signup /> */}
       {/* <Profile /> */}
-      <New />
+      {/* <New /> */}
     </ThemeProvider>
   </StrictMode>
 );
