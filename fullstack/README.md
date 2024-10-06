@@ -6,9 +6,18 @@
   <summary>O que é API (Application Programing Interface / Interface de Programação de Aplicação)</summary>
   O cliente pede ao garçom um prato, o garçom entrega o pedido para a cozinha, a cozinha prepara o prato e passa para o garçom que por sua vez retorna para o cliente. <br />
   A API é um intermediário entre o front-end e o back-end, passando e retornando dados e informações. <br />
+  Interface que disponibiliza um conjunto de funcionalidades para serem utilizadas / consumidas. <br />
   Cliente = Mobile / Desktop / Browser <br />
   Garçom = API NodeJS <br />
   Cozinha = Server <br />
+  <b>REST (Representational State Transfer /  Transferência Representacional de Estado):</b> É um modelo de arquitetura e não uma linguagem ou tecnologia de programação, que fornece diretrizes para que os sistemas distribuídos se comuniquem usando os princípios e protocolos WEB, exemplo HTTP. <br />
+  <b>API RESTful:</b> É uma API aplica os conceitos e que cumpre as diretrizes RESTful. <br />
+  - Back-end não tem ligação com Front-end, ou seja, Bac-end é independente do Front-end. <br />
+  - Respostas uniformes. <br />
+  - Responde de forma concisas e com status code (200, 300, 400, 500). <br />
+  - Sem ligação de estado. Cada requisição deve ter o necessário para o server entender a requisição. O server não deve lembrar / armazenar estados. <br />
+  - Mantém cache de respostas. <br />
+  - Facil manutenção. <br />
 </details>
 <br />
 
