@@ -5,8 +5,8 @@ import AuthRoutes from './auth.routes';
 const Index = () => {
   return (
     <BrowserRouter>
-      <AppRoutes />
-      {/* <AuthRoutes /> */}
+      {/* <AppRoutes /> */}
+      <AuthRoutes />
     </BrowserRouter>
   );
 };
