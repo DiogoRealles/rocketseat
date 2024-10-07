@@ -2,7 +2,7 @@ import { ContainerSignin, Form, Background } from './styles';
 import { FiUser, FiMail, FiLock } from 'react-icons/fi';
 import ContainerInput from '../../components/Input/Index';
 import ContainerButton from '../../components/Button/Index';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
 import { useState } from 'react';
 
@@ -10,6 +10,8 @@ const Index = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const navigate = useNavigate();
 
   function handleSignup() {
     if (!name || !email || !password) {
@@ -20,6 +22,7 @@ const Index = () => {
       .post('/users', { name, email, password })
       .then(() => {
         alert('Usuário cadastrado com sucesso!');
+        navigate('/');
       })
       .catch((error) => {
         if (error.response) {

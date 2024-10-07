@@ -176,3 +176,39 @@
   <b>SIGNATURE:</b> Garante a integridade do token. <br />
 </details>
 <br />
+
+<details>
+  <summary>O que é Context API</summary>
+  É uma bolha que envolve a aplicação, os dados disponíveis nessa bolha é compartilhado para toda a aplicação. <br />
+  Exemplo: nome de usuários, dados de produtos. <br />
+  Exemplo: O sistema possui dois tipos de rotas: <br />
+  1 - Rotas de dentro da aplicação: (Cadastrar notas, Listar notas, Ver perfíl do usuário, Atualizar perfíl do usuário) <br />
+  2 - Rotas de fora da aplicação: (Cadastrar usuário, Login) <br />
+  É necessário verificar se usuário está ou não autenticado, para direcionar usuário para alguma das rotas. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que são Hooks</summary>
+  São funções do ReactJS e permite usar e manipular features do ReactJS reaproveitando da sua lógica (useState, useEffect). <br />
+  ReactJS permite usar Hooks para criar Hooks customizados, com sua própria lógica e encessidade, são chamados de Custom Hooks. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que são States</summary>
+  Permite armazenar valores de forma temporária na aplicação que persistem entre as renderizações dos componentes. <br />
+  <b>useState:</b> Retem os dados entre as renderizações, aciona oReactJS para renderizar os componentescom novos dados. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é useEffect</summary>
+  É um Hook que diz ao ReactJS fazer algo após a renderização, ou seja, depois que realizar as atualizações do DOM. <br />
+  useEffect é usado dentro de componentes para acessar os states docomponente. <br />
+  recebe 2 parâmetros: <br />
+  1 - Arrow function: Lógica que fará o processo desejado. <br />
+  2 - Array de dependências: States que ao serem atualizados, re-renderizam o componente. <br />
+  Exemplo: Buscar lista de notas após a página carregar. <br />
+</details>
+<br />

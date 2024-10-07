@@ -10,12 +10,15 @@ import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import New from './pages/New';
+import { AuthProvider } from './hooks/auth';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Routes />
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
       {/* <Details /> */}
       {/* <Home /> */}
       {/* <Signin /> */}

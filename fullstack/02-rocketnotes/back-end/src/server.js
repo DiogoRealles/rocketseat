@@ -6,11 +6,13 @@ const cors = require('cors');
 const express = require('express');
 const routes = require('./routes');
 const PORT = process.env.PORT;
+const FRONT = '5173';
 
 migrationsRun();
 
 const server = express();
-server.use(cors);
+// server.use(cors());
+server.use(cors({ credentials: true, origin: `http://localhost:${FRONT}` }));
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 server.use('/files', express.static(uploadConfig.UPLOADS_FOLDER));
