@@ -212,3 +212,13 @@
   Exemplo: Buscar lista de notas após a página carregar. <br />
 </details>
 <br />
+
+<details>
+  <summary>O que é Deploy?</summary>
+  Significa implantar, ou seja, enviar um novo projeto, mudanças ou atualizações para um determinado ambiente. <br />
+  Ter diferentes ambientes auxilia a mitigar bugs em produção. <br />
+  <b>Dev:</b> Ambiente para desenvolvimento do projeto e novas features. <br />
+  <b>Tests:</b> Ambiente que contém a versão da aplicação próximo do deploy e feito para testar a aplicação e novas features. <br />
+  <b>Prod:</b> Ambiente disponível para os usuários, deve estar livres de bugs. <br />
+</details>
+<br />

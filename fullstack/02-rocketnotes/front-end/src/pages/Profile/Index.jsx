@@ -5,13 +5,41 @@ import ContainerButton from '../../components/Button';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useAuth } from '../../hooks/auth';
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
+import { api } from '../../services/api';
 
 const Index = () => {
-  const { user } = useAuth();
+  const { user, updateProfile } = useAuth();
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
   const [passwordOld, setPasswordOld] = useState();
   const [passwordNew, setPasswordNew] = useState();
+  const avatarUrl = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder;
+  const [avatar, setAvatar] = useState(avatarUrl);
+  const [avatarFile, setAvatarFile] = useState(null);
+
+  async function handleUpdate() {
+    const updated = {
+      name,
+      email,
+      password: passwordNew,
+      old_password: passwordOld,
+    };
+
+    const userUpdated = Object.assign(user, updated);
+
+    await updateProfile({ user: userUpdated, avatarFile });
+  }
+
+  function handleChangeAvatar({ target }) {
+    const file = target.files[0];
+    setAvatarFile(file);
+
+    const imagePreview = URL.createObjectURL(file);
+    setAvatar(imagePreview);
+  }
 
   return (
     <ContainerProfile>
@@ -23,15 +51,17 @@ const Index = () => {
 
       <Form>
         <Avatar>
-          <img
-            src="https://avatars.githubusercontent.com/u/96884051?v=4"
-            alt=""
-          />
+          <img src={avatar} alt={user.name} />
 
           <label htmlFor="avatar">
             <FiCamera size={24} />
 
-            <input id="avatar" name="avatar" type="file" />
+            <input
+              id="avatar"
+              name="avatar"
+              type="file"
+              onChange={handleChangeAvatar}
+            />
           </label>
         </Avatar>
 
@@ -62,7 +92,7 @@ const Index = () => {
           onChange={({ target }) => setPasswordNew(target.value)}
         />
 
-        <ContainerButton label="Salvar" />
+        <ContainerButton label="Salvar" onClick={handleUpdate} />
       </Form>
     </ContainerProfile>
   );

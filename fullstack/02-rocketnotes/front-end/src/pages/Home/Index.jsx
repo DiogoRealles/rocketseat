@@ -7,8 +7,34 @@ import ContainerSection from '../../components/Section/Index';
 
 import { FiPlus, FiSearch } from 'react-icons/fi';
 import ContainerNote from '../../components/Note/Index';
+import { useEffect, useState } from 'react';
+import { api } from '../../services/api';
 
 const Index = () => {
+  const [tags, setTags] = useState([]);
+  const [tagsSelected, setTagsSelected] = useState([]);
+
+  function handleTagSelected(tagName) {
+    const alreadySelected = tagsSelected.includes(tagName);
+
+    if (alreadySelected) {
+      const filteredTags = tagsSelected.filter((tag) => tag !== tagName);
+      setTagsSelected(filteredTags);
+    } else {
+      setTagsSelected((prevState) => [...prevState, tagName]);
+    }
+  }
+
+  useEffect(() => {
+    async function fetchTags() {
+      const res = await api.get('/tags');
+
+      setTags(res.data);
+    }
+
+    fetchTags();
+  }, []);
+
   return (
     <ContainerHome>
       <Brand>
@@ -17,14 +43,22 @@ const Index = () => {
       <ContainerHeader />
       <Menu>
         <li>
-          <ContainerButtonText label="Todos" isActive />
+          <ContainerButtonText
+            label="Todos"
+            onClick={() => handleTagSelected('all')}
+            isActive={tagsSelected.length === 0}
+          />
         </li>
-        <li>
-          <ContainerButtonText label="ReactJS" />
-        </li>
-        <li>
-          <ContainerButtonText label="NodeJS" />
-        </li>
+        {tags &&
+          tags.map((tag) => (
+            <li key={String(tag.id)}>
+              <ContainerButtonText
+                label={tag.name}
+                onClick={() => handleTagSelected(tag.name)}
+                isActive={tagsSelected.includes(tag.name)}
+              />
+            </li>
+          ))}
       </Menu>
       <Search>
         <ContainerInput

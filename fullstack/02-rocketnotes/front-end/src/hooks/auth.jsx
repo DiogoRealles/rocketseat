@@ -15,6 +15,7 @@ function AuthProvider({ children }) {
       localStorage.setItem('@rocketnotes:token', token);
 
       api.defaults.headers.common['authorization'] = `Bearer ${token}`;
+
       setData({ user, token });
     } catch (error) {
       if (error.res) {
@@ -32,6 +33,32 @@ function AuthProvider({ children }) {
     setData({});
   }
 
+  async function updateProfile({ user, avatarFile }) {
+    try {
+      if (avatarFile) {
+        const fileUpdatedForm = new FormData();
+        fileUpdatedForm.append('avatar', avatarFile);
+
+        const res = await api.patch('/users/avatar', fileUpdatedForm);
+        user.avatar = res.data.avatar;
+      }
+
+      await api.put('/users', user);
+
+      localStorage.setItem('@rocketnotes:user', JSON.stringify(user));
+
+      setData({ user, token: data.token });
+
+      alert('Perfil atualizado!');
+    } catch (error) {
+      if (error.res) {
+        alert(error.res.data.message);
+      } else {
+        alert('Não foi possível atualizar o perfíl!');
+      }
+    }
+  }
+
   useEffect(() => {
     const token = localStorage.getItem('@rocketnotes:token');
     const user = localStorage.getItem('@rocketnotes:user');
@@ -47,7 +74,9 @@ function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ sigIn, signOut, user: data.user }}>
+    <AuthContext.Provider
+      value={{ sigIn, signOut, updateProfile, user: data.user }}
+    >
       {children}
     </AuthContext.Provider>
   );

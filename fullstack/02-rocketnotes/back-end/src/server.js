@@ -11,7 +11,6 @@ const FRONT = '5173';
 migrationsRun();
 
 const server = express();
-// server.use(cors());
 server.use(cors({ credentials: true, origin: `http://localhost:${FRONT}` }));
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
