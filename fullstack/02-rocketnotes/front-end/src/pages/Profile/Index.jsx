@@ -1,12 +1,13 @@
-import { FiArrowLeft, FiUser, FiMail, FiLock, FiCamera } from 'react-icons/fi';
+import { FiUser, FiMail, FiLock, FiCamera, FiArrowLeft } from 'react-icons/fi';
 import { ContainerProfile, Form, Avatar } from './styles';
-import ContainerInput from '../../components/Input';
-import ContainerButton from '../../components/Button';
-import { Link } from 'react-router-dom';
+import ContainerInput from '../../components/Input/Index';
+import ContainerButton from '../../components/Button/Index';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useAuth } from '../../hooks/auth';
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 import { api } from '../../services/api';
+import ContainerButtonText from '../../components/ButtonText/Index';
 
 const Index = () => {
   const { user, updateProfile } = useAuth();
@@ -19,6 +20,8 @@ const Index = () => {
     : avatarPlaceholder;
   const [avatar, setAvatar] = useState(avatarUrl);
   const [avatarFile, setAvatarFile] = useState(null);
+
+  const navigate = useNavigate();
 
   async function handleUpdate() {
     const updated = {
@@ -41,12 +44,16 @@ const Index = () => {
     setAvatar(imagePreview);
   }
 
+  function handleBack() {
+    navigate(-1);
+  }
+
   return (
     <ContainerProfile>
       <header>
-        <Link to="/">
+        <button type="button" onClick={handleBack}>
           <FiArrowLeft size={24} />
-        </Link>
+        </button>
       </header>
 
       <Form>

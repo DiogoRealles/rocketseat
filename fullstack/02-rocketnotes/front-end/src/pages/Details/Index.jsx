@@ -4,45 +4,78 @@ import ContainerButton from '../../components/Button/Index';
 import ContainerHeader from '../../components/Header/Index';
 import ContainerSection from '../../components/Section/Index';
 import ContainerButtonText from '../../components/ButtonText/Index';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { api } from '../../services/api';
 
 const Index = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [data, setData] = useState(null);
+
+  function handleBack() {
+    navigate(-1);
+  }
+
+  async function handleRemove() {
+    const confirm = window.confirm('Deseja realmente remover a nota?');
+
+    if (confirm) {
+      await api.delete(`/notes/${id}`);
+
+      navigate(-1);
+    }
+  }
+
+  useEffect(() => {
+    async function fetchNote() {
+      const res = await api.get(`/notes/${id}`);
+
+      setData(res.data);
+    }
+
+    fetchNote();
+  }, []);
+
   return (
     <ContainerDetails>
       <ContainerHeader />
 
-      <main>
-        <Content>
-          <ContainerButtonText title="Excluir nota" />
+      {data && (
+        <main>
+          <Content>
+            <ContainerButtonText title="Excluir nota" onClick={handleRemove} />
 
-          <h1>Introdução ao ReactJS</h1>
+            <h1>{data.title}</h1>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo iste
-            aperiam obcaecati labore rerum tenetur sapiente animi possimus
-            aspernatur optio! Molestiae ea fugiat nesciunt, sint iure esse
-            dolores vitae porro?. <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-          </p>
+            <p>{data.description}</p>
 
-          <ContainerSection title="Links úteis">
-            <Links>
-              <li>
-                <a href="">htps://rocketseat.com</a>
-              </li>
-              <li>
-                <a href="">htps://origamid.com</a>
-              </li>
-            </Links>
-          </ContainerSection>
+            {data.links && (
+              <ContainerSection title="Links úteis">
+                <Links>
+                  {data.links.map((link) => (
+                    <li key={String(link.id)}>
+                      <a href={link.url} target="_blank">
+                        {link.url}
+                      </a>
+                    </li>
+                  ))}
+                </Links>
+              </ContainerSection>
+            )}
 
-          <ContainerSection title="Marcadores">
-            <ContainerTag title="Express" />
-            <ContainerTag title="NodeJS" />
-          </ContainerSection>
+            {data.tags && (
+              <ContainerSection title="Marcadores">
+                {data.tags.map((tag) => (
+                  <ContainerTag title={tag.name} key={String(tag.id)} />
+                ))}
+              </ContainerSection>
+            )}
 
-          <ContainerButton title="Voltar" />
-        </Content>
-      </main>
+            <ContainerButton title="Voltar" onClick={handleBack} />
+          </Content>
+        </main>
+      )}
     </ContainerDetails>
   );
 };

@@ -11,9 +11,11 @@ export const ContainerProfile = styled.div`
     align-items: center;
     padding-inline: 12.4rem;
 
-    svg {
+    button {
+      background: none;
+      border: none;
+      font-size: 2rem;
       color: ${({ theme }) => theme.colors.gray_100};
-      font-size: 2.4rem;
     }
   }
 `;

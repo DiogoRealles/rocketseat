@@ -6,9 +6,10 @@ import ContainerTextarea from '../../components/Textarea/Index';
 import ContainerButton from '../../components/Button/Index';
 import ContainerNoteItem from '../../components/NoteItem';
 import ContainerSection from '../../components/Section/Index';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { api } from '../../services/api';
+import ContainerButtonText from '../../components/ButtonText/Index';
 
 const Index = () => {
   const [title, setTitle] = useState('');
@@ -61,7 +62,11 @@ const Index = () => {
 
     alert('Nota criada com sucesso!');
 
-    navigate('/');
+    navigate(-1);
+  }
+
+  function handleBack() {
+    navigate(-1);
   }
 
   return (
@@ -72,7 +77,7 @@ const Index = () => {
         <Form action="">
           <header>
             <h1>Criar nota</h1>
-            <Link to="/">Voltar</Link>
+            <ContainerButtonText title="Voltar" onClick={handleBack} />
           </header>
 
           <ContainerInput
