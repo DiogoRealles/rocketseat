@@ -39,7 +39,7 @@ const Index = () => {
           onChange={({ target }) => setPassword(target.value)}
         />
 
-        <ContainerButton label="Entrar" onClick={handleSignin} />
+        <ContainerButton title="Entrar" onClick={handleSignin} />
 
         <Link to="/register">Criar conta</Link>
       </Form>

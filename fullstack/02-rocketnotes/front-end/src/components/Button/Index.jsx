@@ -1,9 +1,9 @@
 import { ContainerButton } from './styles';
 
-const Index = ({ label, loading = false, ...rest }) => {
+const Index = ({ title, loading = false, ...rest }) => {
   return (
     <ContainerButton type="button" disabled={loading} {...rest}>
-      {loading ? 'Carregando...' : label}
+      {loading ? 'Carregando...' : title}
     </ContainerButton>
   );
 };

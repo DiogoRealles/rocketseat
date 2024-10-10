@@ -62,7 +62,7 @@ const Index = () => {
           onChange={({ target }) => setPassword(target.value)}
         />
 
-        <ContainerButton label="Cadastrar" onClick={handleSignup} />
+        <ContainerButton title="Cadastrar" onClick={handleSignup} />
 
         <Link to="/">Voltar para o login</Link>
       </Form>

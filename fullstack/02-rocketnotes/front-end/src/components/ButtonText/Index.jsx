@@ -1,13 +1,13 @@
 import { ContainerButtonText } from './styles';
 
-const Index = ({ label, isActive = false, ...rest }) => {
+const Index = ({ title, isActive = false, ...rest }) => {
   return (
     <ContainerButtonText
       type="button"
       $isactive={isActive.toString()}
       {...rest}
     >
-      {label}
+      {title}
     </ContainerButtonText>
   );
 };

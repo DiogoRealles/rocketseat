@@ -92,7 +92,7 @@ const Index = () => {
           onChange={({ target }) => setPasswordNew(target.value)}
         />
 
-        <ContainerButton label="Salvar" onClick={handleUpdate} />
+        <ContainerButton title="Salvar" onClick={handleUpdate} />
       </Form>
     </ContainerProfile>
   );

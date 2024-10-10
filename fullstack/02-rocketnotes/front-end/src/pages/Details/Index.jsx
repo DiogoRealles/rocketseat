@@ -12,7 +12,7 @@ const Index = () => {
 
       <main>
         <Content>
-          <ContainerButtonText label="Excluir nota" />
+          <ContainerButtonText title="Excluir nota" />
 
           <h1>Introdução ao ReactJS</h1>
 
@@ -40,7 +40,7 @@ const Index = () => {
             <ContainerTag title="NodeJS" />
           </ContainerSection>
 
-          <ContainerButton label="Voltar" />
+          <ContainerButton title="Voltar" />
         </Content>
       </main>
     </ContainerDetails>

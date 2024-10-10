@@ -122,7 +122,7 @@ const Index = () => {
             </div>
           </ContainerSection>
 
-          <ContainerButton label="Salvar" onClick={handleNewNote} />
+          <ContainerButton title="Salvar" onClick={handleNewNote} />
         </Form>
       </main>
     </ContainerNew>

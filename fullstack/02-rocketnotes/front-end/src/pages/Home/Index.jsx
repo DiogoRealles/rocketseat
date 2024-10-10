@@ -9,12 +9,21 @@ import { FiPlus, FiSearch } from 'react-icons/fi';
 import ContainerNote from '../../components/Note/Index';
 import { useEffect, useState } from 'react';
 import { api } from '../../services/api';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
+  const navigate = useNavigate();
+
   const [tags, setTags] = useState([]);
   const [tagsSelected, setTagsSelected] = useState([]);
+  const [search, setSearch] = useState('');
+  const [notes, setNotes] = useState([]);
 
   function handleTagSelected(tagName) {
+    if (tagName === 'all') {
+      return setTagsSelected([]);
+    }
+
     const alreadySelected = tagsSelected.includes(tagName);
 
     if (alreadySelected) {
@@ -23,6 +32,10 @@ const Index = () => {
     } else {
       setTagsSelected((prevState) => [...prevState, tagName]);
     }
+  }
+
+  function handleDetails(id) {
+    navigate(`/details/${id}`);
   }
 
   useEffect(() => {
@@ -35,6 +48,16 @@ const Index = () => {
     fetchTags();
   }, []);
 
+  useEffect(() => {
+    async function fetchNotes() {
+      const res = await api.get(`/notes?title=${search}&tags=${tagsSelected}`);
+
+      setNotes(res.data.notesWithTags);
+    }
+
+    fetchNotes();
+  }, [tagsSelected, search]);
+
   return (
     <ContainerHome>
       <Brand>
@@ -44,18 +67,18 @@ const Index = () => {
       <Menu>
         <li>
           <ContainerButtonText
-            label="Todos"
+            title="Todos"
             onClick={() => handleTagSelected('all')}
-            isActive={tagsSelected.length === 0}
+            $isactive={tagsSelected.length === 0}
           />
         </li>
         {tags &&
           tags.map((tag) => (
             <li key={String(tag.id)}>
               <ContainerButtonText
-                label={tag.name}
+                title={tag.name}
                 onClick={() => handleTagSelected(tag.name)}
-                isActive={tagsSelected.includes(tag.name)}
+                $isactive={tagsSelected.includes(tag.name)}
               />
             </li>
           ))}
@@ -65,20 +88,18 @@ const Index = () => {
           icon={FiSearch}
           type="search"
           placeholder="Pesquisar pelo título"
+          onChange={({ target }) => setSearch(target.value)}
         />
       </Search>
       <Content>
         <ContainerSection title="Minhas notas">
-          <ContainerNote
-            data={{
-              title: 'ReactJS',
-              tags: [
-                { id: '1', name: 'ReactJS' },
-                { id: '2', name: 'NodeJS' },
-              ],
-            }}
-          />
-          {/* <ContainerTag title="ReactJS" /> */}
+          {notes.map((note) => (
+            <ContainerNote
+              key={String(note.id)}
+              data={note}
+              onClick={() => handleDetails(note.id)}
+            />
+          ))}
         </ContainerSection>
       </Content>
       <NewNote to="/new">
