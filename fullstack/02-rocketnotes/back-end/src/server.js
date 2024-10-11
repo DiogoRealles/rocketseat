@@ -5,7 +5,7 @@ const uploadConfig = require('./configs/upload');
 const cors = require('cors');
 const express = require('express');
 const routes = require('./routes');
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || '3338';
 const FRONT = '5173';
 
 migrationsRun();

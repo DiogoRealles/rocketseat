@@ -4,12 +4,6 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/global';
 import theme from './styles/theme';
 import Routes from './routes/Index';
-import Details from './pages/Details';
-import Home from './pages/Home';
-import Signin from './pages/Signin';
-import Signup from './pages/Signup';
-import Profile from './pages/Profile';
-import New from './pages/New';
 import { AuthProvider } from './hooks/auth';
 
 createRoot(document.getElementById('root')).render(
@@ -19,12 +13,6 @@ createRoot(document.getElementById('root')).render(
       <AuthProvider>
         <Routes />
       </AuthProvider>
-      {/* <Details /> */}
-      {/* <Home /> */}
-      {/* <Signin /> */}
-      {/* <Signup /> */}
-      {/* <Profile /> */}
-      {/* <New /> */}
     </ThemeProvider>
   </StrictMode>
 );
