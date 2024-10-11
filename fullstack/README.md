@@ -222,3 +222,14 @@
   <b>Prod:</b> Ambiente disponível para os usuários, deve estar livres de bugs. <br />
 </details>
 <br />
+
+<details>
+  <summary>Autenticação e Autorização</summary>
+  <b>Autenticação:</b> É o processo de verificação das credenciais de um usuário para provar que o usuário é quem diz ser. Se as credenciais corresponderem, concede acesso, se não, nega o acesso. <br />
+  Exemplo: usuário informa email e senha, o sistema verifica se os dados estão cadastrados e corretos e então libera o acesso, caso contrário nega o acesso e informa um erro de email e/ou senha. <br />
+  Exemplo: Funcionário para entrar na empresa, precisa usar crachá ou digital, e o sistema registra e libera entrada do funcionário. <br />
+  Após a autenticação o sistema faz um verificação de autorização. <br />
+  <b>Autorização:</b> É o processo de verificação se o usuário tem permissão para acessar uma área do sistema ou executar ações expecíficas. A autorização pode conceder ou negar permissão para realizar tarefas ou acessar áreas de um sistema. <br />
+  Exemplo: Ao entrar na empresa, precisa de uma autorização para entrar na sala dos superiores, sala do cofre, e outros departamentos. <br />
+</details>
+<br />
