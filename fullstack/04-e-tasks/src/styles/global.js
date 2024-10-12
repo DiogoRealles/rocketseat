@@ -3,13 +3,7 @@ import { DEVICE_BREAKPOINTS } from '../styles/deviceBreakpoints';
 
 export default createGlobalStyle`
   html{
-    font-size: 16px;
-  }
-
-  :root{
-    @media (max-width: ${DEVICE_BREAKPOINTS.MD}){
-      font-size: 12px;
-    }
+    font-size: 62.5%;
   }
 
   * {
@@ -27,7 +21,7 @@ export default createGlobalStyle`
 
   body, input, button, textarea {
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: 1.6rem;
     outline: none;
   }
 
@@ -45,7 +39,7 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: .8rem;
   }
   
   ::-webkit-scrollbar-track {
