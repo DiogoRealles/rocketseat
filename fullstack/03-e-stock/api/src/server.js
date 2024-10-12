@@ -5,11 +5,12 @@ const express = require('express');
 const routes = require('./routes');
 const PORT = process.env.PORT || '3338';
 const FRONT = '5173';
-
+const cookieParser = require('cookie-parser');
 const AppError = require('./utils/AppError');
 
 const server = express();
 server.use(express.json());
+server.use(cookieParser());
 server.use(
   cors({
     origin: [`http://localhost:${FRONT}`, `http://127.0.0.1:${FRONT}`],
