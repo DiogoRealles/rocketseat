@@ -1,0 +1,13 @@
+{
+  "name": "01-intro",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "node --watch --no-warnings --env-file=.env ./src/server.js"
+  },
+  "keywords": [],
+  "author": "Diogo Realles <diogorealles@hotmail.com> (https://diogorealles.github.io/)",
+  "license": "MIT",
+  "description": ""
+}
