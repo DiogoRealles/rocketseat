@@ -60,6 +60,11 @@
   Básicamente seria ler e manipular pequenas partes de algum conteúdo (música, filme, texto) antes de obte-lo por completo. <br />
   NodeJS possui diversas portas de I/O (req: Readable Streams, res: Writable Streams) ou stdin: Readable Streams / stdout: Writable Streams comandos lidos do terminal pelo process do node. <br />
   Os chunks precisam ser convertidos de tipos primitivos (int, string, bool, etc) em Buffer para serem lidos. <br />
+  Em outros casos como leitura em formato JSON é necessário que o arquivo seja lido por completo para ser manipulado. <br />
+  Para isso é criado um array de buffer e a request é percorrido e os dados inseridos no array de buffer. <br />
+  Buffer é uma representação de um espaço na memória do computador, usado para transitar dados de uma maneira muito rápida, os dados armazenado no Buffer, são em binários. Desta forma é mais rápido e performático por que a memória do computador só armazena dados 0/1 usando pulso de energia. Então converter String unicode UTF-8 para binários hexadecimal (16bits) para armazenar na memória flash é mais rápido e performático. <br />
+  <b>buff = Buffer.from('hello')</b>. <br />
+  <b>console.log(buff)</b> -> Buffer 68 65 6c 6c 6f <br />
 </details>
 <br />
 
