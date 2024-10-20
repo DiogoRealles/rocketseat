@@ -1,0 +1,13 @@
+{
+  "name": "02-streams",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "01-fundamentals.js",
+  "scripts": {
+    "streams": "node ./01-fundamentals.js"
+  },
+  "keywords": [],
+  "author": "Diogo Realles <diogorealles@hotmail.com> (https://diogorealles.github.io/)",
+  "license": "MIT",
+  "description": ""
+}

@@ -54,6 +54,15 @@
 </details>
 <br />
 
+<details>
+  <summary>O que são Streams?</summary>
+  NodeJS trouxe uma solução performática de forma simplificada em entregas de aquivos "chunks". <br />
+  Básicamente seria ler e manipular pequenas partes de algum conteúdo (música, filme, texto) antes de obte-lo por completo. <br />
+  NodeJS possui diversas portas de I/O (req: Readable Streams, res: Writable Streams) ou stdin: Readable Streams / stdout: Writable Streams comandos lidos do terminal pelo process do node. <br />
+  Os chunks precisam ser convertidos de tipos primitivos (int, string, bool, etc) em Buffer para serem lidos. <br />
+</details>
+<br />
+
 NodeJS - Possui gerenciadores de pacotes, o famoso NPM,
 existe seu principal concorrente YARN.
 Gerenciadores de pacotes permitem instalar e disponibilizar bibliotecas de
