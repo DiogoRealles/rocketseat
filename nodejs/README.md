@@ -9,6 +9,12 @@
   <a href="https://nodejs.org/en/download/"><b>Download NodeJS</b></a>
   <img src="./nodejs.png" />
   Utiliza Módulos / Packages para construir aplicações. <br />
+  NodeJS - Possui gerenciadores de pacotes, o famoso NPM, existe seu principal concorrente YARN. <br />
+  Gerenciadores de pacotes permitem instalar e disponibilizar bibliotecas de tercceiros de uma forma muito simples (npm i nome_do_pacote, yarn add nome_do_pacote). <br />
+  NodeJS trabalha com sistemas de módulos. <br />
+  NodeJS possui conjuntos de modulos próprios: <br />
+  FileSystem - Para leitura e escrita de arquivos. <br />
+  http - Para metodos http e rotas. <br />
   NodeJS é baseado em sistema de event loops, ou seja, em eventos. <br />
   Internamente possui um espaço para uma pilha de funções que vão entrando. <br />
   NodeJS (O Boss) - É single-thred, porém possui 4 threds
@@ -68,68 +74,43 @@
 </details>
 <br />
 
-NodeJS - Possui gerenciadores de pacotes, o famoso NPM,
-existe seu principal concorrente YARN.
-Gerenciadores de pacotes permitem instalar e disponibilizar bibliotecas de
-tercceiros de uma
-forma muito simples (npm i nome_do_pacote, yarn add nome_do_pacote).
+<details>
+  <summary>Params, Body, Query</summary>
+  Route Params - São parâmetros das rotas, sua caracteristica é serem separados por :id, servem para buscar, identificar, editar ou deletar um recurso. <br />
+  uso: let params = req.params; <br />
+  Query Params - São parâmetros das rotas, sua caracteristica é serem separados por ?key=value&order=desc / ?userId=1&name=Diogo, servem para filtrar/paginação um recurso. <br />
+  uso: let params = req.query; <br />
+  Body Params - São parâmetros passados como objetos, sua caracteristica é serem passados no corpo / formulário da requisição geralmente como JSON, { "name" = "Diogo", lastname = "Realles"} servem para inserir/alterar um recurso. <br />
+  uso: let body = req.body; <br />
+</details>
+<br />
 
-NodeJS trabalha com sistemas de módulos.
-Modulos -
-NodeJS possui conjuntos de modulos próprios:
-FileSystem - Para leitura e escrita de arquivos.
-http - Para metodos http e rotas.
+<details>
+  <summary>O que são Middlewares?</summary>
+  São interceptadores, ou seja, são funções que executam entre uma requisição e resposta da aplicação. Possuem acesso e podem transformar os dados de request e response. <br />
+  Middleware - São função que fica entre a requisição e resposta, geralmente utilizada para validação de tokken, tipo de usuário. <br />
+  Funções midlewares recebem 3 parâmetros (req, res, next) *parâmetro next é responsável por dar continuidade ou não ao middleware. <br />
+  Como toda função, middlewares devem ser chamados/invocados. <br />
+  Middleware pode ser chamado de duas formas: <br />
+  1 - Chamado como segundo parâmetro nas chamadas dos métodos das rotas, ficando entre a rota e req, res. Podem ser adicionados mais middlewares. *Esse modo serve para uma rota em específico. <br />
+  2 - Utilizand método ".use( )": server.use(função_middleware); \*Este modo ficará disponível para todas as rotas abaixo deste ".use( )". <br />
+</details>
+<br />
 
-Express - Framework mais utilizado no ecossistema do NodeJS,
-auxilia a gerenciar servidor interno e rotas
-utiliza por baixo dos panos http, módulo interno do nodeJS.
-
-API - Aplication Programming Interface (Interface de Programação de Aplicativos)
-São regras de como as aplicações podem e devem se comunicar.
-Rest - Representation State Transfer (Transferência Representacional de Estado)
-É um modelo de arquitetura, um padrão, ou seja ao aplicar as regras e padrões
-Rest a API fica no padrão API Rest.
-Rest possui 6 principais regras:
-1 - Separar responsabilidades entre Cliente e Servidor
-2 - Deve fornecer todas as informações como se fosse a primeiro pedido
-3 - Suporte para cache
-4 - Fácil identificações de recursos, representações, feedbacks.
-5 - Ser construidas por camadas (segurança, recursos, etc)
-6 - Ser modular
-
-API RestFul - Ao aplicar regras como:
-Utilização correta dos verbos HTTP e dos Status Code
-
-e padrões de Rest em uma API ela é considerada
-API RestFul
-
-Por padrão os browsers só utlizam do método GET para requisições, para simular
-outros métodos é necessário utilizar ferramentas como Isomnia ou Postman
-
-Tipos de parâmetros
-Route Params - São parâmetros das rotas, sua caracteristica é serem separados
-por :id, servem para buscar, identificar, editar ou deletar um recurso.
-uso: let params = req.params;
-
-Query Params - São parâmetros das rotas, sua caracteristica é serem separados
-por ?key=value&order=desc, servem para filtrar/paginação um recurso.
-uso: let params = req.query;
-
-Body Params - São parâmetros passados como objetos, sua caracteristica é serem
-passados no corpo da requisição geralmente como JSON,
-{ "name" = "Karoll", lastname = "Kym"}
-servem para inserir/alterar um recurso.
-uso: let body = req.body;
-
-Middleware - São função que fica entre a requisição e resposta, geralmente utilizada para
-validação de tokken, tipo de usuário.
-Funções midlewares recebem 3 parâmetros (req, res, next) *parâmetro next é
-responsável por dar continuidade ou não ao middleware.
-Como toda função, middlewares devem ser chamados/invocados.
-Middleware pode ser chamado de duas formas:
-1 - Chamado como segundo parâmetro nas chamadas dos métodos das rotas, ficando
-entre a rota e req, res. Podem ser adicionados mais middlewares.
-*Esse modo serve para uma rota em específico
-2 - Utilizand método "use( )":
-server.use(função_middleware);
-\*Este modo ficará disponível para todas as rotas abaixo deste "use( )".
+<details>
+  <summary>O que são API - Aplication Programming Interface (Interface de Programação de Aplicativos)?</summary>
+  São regras de como as aplicações podem e devem se comunicar. <br />
+  Rest - Representation State Transfer (Transferência Representacional de Estado). <br />
+  É um modelo de arquitetura, um padrão, ou seja ao aplicar as regras e padrões. <br />
+  Rest a API fica no padrão API Rest. <br />
+  Rest possui 6 principais regras: <br />
+  1 - Separar responsabilidades entre Cliente e Servidor. <br />
+  2 - Deve fornecer todas as informações como se fosse a primeiro pedido. <br />
+  3 - Suporte para cache. <br />
+  4 - Fácil identificações de recursos, representações, feedbacks. <br />
+  5 - Ser construidas por camadas (segurança, recursos, etc). <br />
+  6 - Ser modular. <br />
+  API RestFul - Ao aplicar regras como: <br />
+  Utilização correta dos verbos HTTP e dos Status Code e padrões de Rest em uma API ela é considerada API RestFul. <br />
+</details>
+<br />

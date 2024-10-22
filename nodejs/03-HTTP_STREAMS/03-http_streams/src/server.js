@@ -1,6 +1,5 @@
 import http from 'node:http';
-// const PORT = process.env.PORT;
-const PORT = '3333';
+const PORT = process.env.PORT;
 
 const users = [];
 

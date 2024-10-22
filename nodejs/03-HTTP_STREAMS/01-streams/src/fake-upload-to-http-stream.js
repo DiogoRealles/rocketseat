@@ -1,4 +1,5 @@
 import { Readable } from 'node:stream';
+const PORT = process.env.PORT;
 
 class OneToHundredStream extends Readable {
   index = 1;
@@ -17,7 +18,7 @@ class OneToHundredStream extends Readable {
   }
 }
 
-fetch('http://localhost:3334', {
+fetch(`http://localhost:${PORT}`, {
   method: 'POST',
   body: new OneToHundredStream(),
   duplex: 'half',

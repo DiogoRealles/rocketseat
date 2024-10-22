@@ -1,10 +1,10 @@
 {
-  "name": "02-streams",
+  "name": "03-http_streams",
   "type": "module",
   "version": "1.0.0",
-  "main": "01-fundamentals.js",
+  "main": "server.js",
   "scripts": {
-    "server": "node --watch --no-warnings ./src/server.js"
+    "server": "node --watch --no-warnings --env-file=.env ./src/server.js"
   },
   "keywords": [],
   "author": "Diogo Realles <diogorealles@hotmail.com> (https://diogorealles.github.io/)",

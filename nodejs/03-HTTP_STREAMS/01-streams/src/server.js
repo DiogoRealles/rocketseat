@@ -1,5 +1,6 @@
 import http from 'node:http';
 import { Transform } from 'node:stream';
+const PORT = process.env.PORT;
 
 class InverseNumberStream extends Transform {
   _transform(chunk, encoding, callback) {
@@ -15,4 +16,6 @@ const server = http.createServer((req, res) => {
   return req.pipe(new InverseNumberStream()).pipe(res);
 });
 
-server.listen(3334);
+server.listen(PORT, () =>
+  console.log(`Server running at: http://localhost:${PORT}`)
+);

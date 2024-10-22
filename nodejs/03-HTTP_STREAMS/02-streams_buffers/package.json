@@ -1,0 +1,14 @@
+{
+  "name": "02-streams_buffers",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "server": "node --watch --no-warnings --env-file=.env ./src/server.js",
+    "fake-upload-stream": "node --watch --no-warnings --env-file=.env ./src/fake-upload-to-http-stream.js"
+  },
+  "keywords": [],
+  "author": "Diogo Realles <diogorealles@hotmail.com> (https://diogorealles.github.io/)",
+  "license": "MIT",
+  "description": ""
+}

@@ -1,11 +1,10 @@
 {
-  "name": "03-http_streams",
+  "name": "04-node_partials",
   "type": "module",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "server": "node --watch --no-warnings --env-file=.env ./streams/server.js",
-    "fake-upload-stream": "node --watch --no-warnings ./streams/fake-upload-to-http-stream.js"
+    "server": "node --watch --no-warnings --env-file=.env ./src/server.js"
   },
   "keywords": [],
   "author": "Diogo Realles <diogorealles@hotmail.com> (https://diogorealles.github.io/)",
