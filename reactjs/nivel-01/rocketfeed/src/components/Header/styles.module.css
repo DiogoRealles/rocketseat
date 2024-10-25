@@ -1,0 +1,16 @@
+.header {
+  background: var(--gray-800);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2rem;
+  height: 8rem;
+}
+
+.header img {
+  height: 3.2rem;
+}
+
+.header h1 {
+  padding: 2rem;
+}
