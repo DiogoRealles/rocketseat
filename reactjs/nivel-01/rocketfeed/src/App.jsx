@@ -14,8 +14,20 @@ const App = () => {
         <Sidebar />
 
         <main>
-          <Post title="title" body="body" />
-          <Post title="title" body="body" />
+          <Post
+            name="Kirito Kamada"
+            role="Web Developer Front-end"
+            publishedAt="Publicado há 1h"
+            avatarURL="https://randomuser.me/api/portraits/men/27.jpg"
+            content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod eius sint tenetur provident porro recusandae unde accusamus, molestiae commodi quis dolor minus nulla. Quo atque quas tempore cum aliquam enim?"
+          />
+          <Post
+            name="Asuna Suguha"
+            role="UX UI Designer"
+            publishedAt="Publicado há 1h"
+            avatarURL="https://randomuser.me/api/portraits/women/88.jpg"
+            content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod eius sint tenetur provident porro recusandae unde accusamus, molestiae commodi quis dolor minus nulla. Quo atque quas tempore cum aliquam enim?"
+          />
         </main>
       </div>
     </div>
