@@ -5,12 +5,10 @@ import styles from './styles.module.css';
 //   hasBorder?: boolean;
 // }
 
-// const Index = ({ hasBorder = true, ...props }: AvatarProps) => {
-const Index = () => {
+const Index = ({ hasBorder = true, ...props }) => {
   return (
     <img
-      className={styles.avatar}
-      // className={hasBorder ? styles.avatarWithBorder : styles.avatar}
+      className={hasBorder ? styles.avatarWithBorder : styles.avatar}
       {...props}
     />
   );
