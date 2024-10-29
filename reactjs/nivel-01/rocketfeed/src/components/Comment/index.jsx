@@ -2,10 +2,13 @@ import { ThumbsUp, Trash } from 'phosphor-react';
 import styles from './styles.module.css';
 import Avatar from '../Avatar/';
 
-const Index = (props) => {
+const Index = ({ content }) => {
   return (
     <div className={styles.comment}>
-      <Avatar hasBorder={false} src={props.src} />
+      <Avatar
+        hasBorder={false}
+        src="https://avatars.githubusercontent.com/u/96884051?v=4"
+      />
 
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
@@ -21,7 +24,7 @@ const Index = (props) => {
             </button>
           </header>
 
-          <p>Muito bom Diogo, Parabéns!! 👏</p>
+          <p>{content}</p>
         </div>
 
         <footer>

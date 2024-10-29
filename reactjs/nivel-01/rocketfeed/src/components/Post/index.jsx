@@ -4,8 +4,12 @@ import Comment from '../Comment/';
 
 import { format, formatDistanceToNow } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
+import { useState } from 'react';
 
 const Index = ({ author, publishedAt, content }) => {
+  const [comments, setComments] = useState(['Comment 01']);
+  const [newCommentText, setNewCommentText] = useState('');
+
   // const publishedDateFormatted = new Intl.DateTimeFormat('pt-BR', {
   //   day: '2-digit',
   //   month: 'long',
@@ -23,6 +27,17 @@ const Index = ({ author, publishedAt, content }) => {
     locale: ptBR,
     addSuffix: true,
   });
+
+  function handleCreateNewComment(event) {
+    event.preventDefault();
+
+    setComments([...comments, newCommentText]);
+    setNewCommentText('');
+  }
+
+  function handleNewCommentChange(event) {
+    setNewCommentText(event.target.value);
+  }
 
   return (
     <article className={styles.post}>
@@ -50,7 +65,7 @@ const Index = ({ author, publishedAt, content }) => {
             return <p key={line.content}>{line.content}</p>;
           } else if (line.type === 'link') {
             return (
-              <p key={line.index}>
+              <p key={line.content}>
                 <a href="#">{line.content}</a>
               </p>
             );
@@ -58,9 +73,14 @@ const Index = ({ author, publishedAt, content }) => {
         })}
       </div>
 
-      <form className={styles.commentForm}>
+      <form className={styles.commentForm} onSubmit={handleCreateNewComment}>
         <strong>Deixe seu feedback</strong>
-        <textarea placeholder="Deixe um comentário" />
+        <textarea
+          placeholder="Deixe um comentário"
+          name="comment"
+          value={newCommentText}
+          onChange={handleNewCommentChange}
+        />
 
         <footer>
           <button type="submit">Publicar</button>
@@ -68,9 +88,9 @@ const Index = ({ author, publishedAt, content }) => {
       </form>
 
       <div className={styles.commentList}>
-        <Comment src="https://randomuser.me/api/portraits/women/88.jpg" />
-        <Comment src="https://randomuser.me/api/portraits/men/88.jpg" />
-        <Comment src="https://randomuser.me/api/portraits/women/28.jpg" />
+        {comments.map((comment, index) => (
+          <Comment content={comment} key={index} />
+        ))}
       </div>
     </article>
   );
