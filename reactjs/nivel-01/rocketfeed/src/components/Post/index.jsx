@@ -28,6 +28,8 @@ const Index = ({ author, publishedAt, content }) => {
     addSuffix: true,
   });
 
+  const isNewCommentEmpty = newCommentText.length === 0;
+
   function handleCreateNewComment(event) {
     event.preventDefault();
 
@@ -36,7 +38,21 @@ const Index = ({ author, publishedAt, content }) => {
   }
 
   function handleNewCommentChange(event) {
+    event.target.setCustomValidity('');
+
     setNewCommentText(event.target.value);
+  }
+
+  function handleNewCommentInvalid(event) {
+    event.target.setCustomValidity('Esse campo é obrigatório!');
+  }
+
+  function deleteComment(commentToDelete) {
+    const commentWithoutDeletedOne = comments.filter((comment) => {
+      return comment !== commentToDelete;
+    });
+
+    setComments(commentWithoutDeletedOne);
   }
 
   return (
@@ -75,21 +91,30 @@ const Index = ({ author, publishedAt, content }) => {
 
       <form className={styles.commentForm} onSubmit={handleCreateNewComment}>
         <strong>Deixe seu feedback</strong>
+
         <textarea
           placeholder="Deixe um comentário"
           name="comment"
           value={newCommentText}
+          onInvalid={handleNewCommentInvalid}
+          required
           onChange={handleNewCommentChange}
         />
 
         <footer>
-          <button type="submit">Publicar</button>
+          <button type="submit" disabled={isNewCommentEmpty}>
+            Publicar
+          </button>
         </footer>
       </form>
 
       <div className={styles.commentList}>
         {comments.map((comment, index) => (
-          <Comment content={comment} key={index} />
+          <Comment
+            content={comment}
+            key={comment + index}
+            onDeleteComment={deleteComment}
+          />
         ))}
       </div>
     </article>
