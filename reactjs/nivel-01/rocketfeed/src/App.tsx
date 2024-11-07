@@ -1,15 +1,15 @@
 import './styles/global.css';
 import styles from './App.module.css';
-import Post from './components/Post';
-import Sidebar from './components/Sidebar';
-import Header from './components/Header';
+import Post, { PostType } from './components/Post/';
+import Sidebar from './components/Sidebar/';
+import Header from './components/Header/';
 
-const posts = [
+const posts: PostType[] = [
   {
     id: 1,
     author: {
       avatarURL: 'https://randomuser.me/api/portraits/men/19.jpg',
-      name: 'Diogo Realles',
+      name: 'Igor Azevedo Santos',
       role: 'Web Developer Front-end',
     },
     content: [
@@ -19,15 +19,15 @@ const posts = [
         content:
           'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod eius sint tenetur provident porro recusandae unde accusamus, molestiae commodi quis dolor minus nulla. Quo atque quas tempore cum aliquam enim?',
       },
-      { type: 'link', content: 'diogorealles/doctorcare' },
+      { type: 'link', content: 'igor/doctorcare' },
     ],
-    publishedAt: new Date('2022-05-03 20:00:00'),
+    publishedAt: new Date('2024-05-03 20:00:00'),
   },
   {
     id: 2,
     author: {
       avatarURL: 'https://randomuser.me/api/portraits/women/88.jpg',
-      name: 'Asuna Kamada',
+      name: 'Emilly Sousa Fernandes',
       role: 'UX UI Designer',
     },
     content: [
@@ -37,15 +37,15 @@ const posts = [
         content:
           'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo tempore, incidunt ipsam libero corporis ratione beatae qui repellat asperiores commodi! Nostrum, molestias? Doloribus quo, odit ullam corrupti vitae doloremque! Accusantium?',
       },
-      { type: 'link', content: 'asunakamada/sao' },
+      { type: 'link', content: 'amly/nlw11' },
     ],
-    publishedAt: new Date('2022-05-03 20:00:00'),
+    publishedAt: new Date('2024-10-03 20:00:00'),
   },
   {
     id: 3,
     author: {
       avatarURL: 'https://randomuser.me/api/portraits/men/17.jpg',
-      name: 'Kirito Kirigaya',
+      name: 'Devson Correia Oliveira',
       role: 'Web Developer Back-end',
     },
     content: [
@@ -55,9 +55,9 @@ const posts = [
         content:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minima distinctio? Architecto veniam ratione nihil voluptates deserunt pariatur eaque optio. Commodi sequi asperiores iste. Porro nobis cumque sint ducimus provident!',
       },
-      { type: 'link', content: 'kiritokirigaya/nlw11' },
+      { type: 'link', content: 'filhododev/portfolio' },
     ],
-    publishedAt: new Date('2022-05-03 20:00:00'),
+    publishedAt: new Date('2024-11-03 20:00:00'),
   },
 ];
 
@@ -70,12 +70,7 @@ const App = () => {
 
         <main>
           {posts.map((post) => (
-            <Post
-              key={post.id}
-              author={post.author}
-              content={post.content}
-              publishedAt={post.publishedAt}
-            />
+            <Post key={post.id} post={post} />
           ))}
         </main>
       </div>
