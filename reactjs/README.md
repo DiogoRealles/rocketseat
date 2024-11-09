@@ -38,3 +38,18 @@
   <b>custom Hooks</b>. <br />
 </details>
 <br />
+
+<details>
+  <summary>O que é CSS in JS?</summary>
+  É uma forma de estilizar os componentes com sintaxe JS. <br />
+  <b>Styled-Components:</b> É um pacote que permite estilizar as aplicações em ReactJS com CSS in JS. É necessário do pacote de types <b>npm i @types/styled-components -D</b>. <br />
+  Styled-Components possui algumas vantagens como: auxiliar na estilização dinâmica dos componentes, nomear classes únicas evitando conflitos de estilos. <br />
+</details>
+<br />
+
+<details>
+  <summary>O que é ESLint (EcmaScript Linting)?</summary>
+  É um processo de validar que o código segue um padrão que pode ser definido pela equipe (tab: 2, ; no final, aspas simples (' ')). <br />
+
+</details>
+<br />
